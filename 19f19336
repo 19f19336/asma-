@@ -1,0 +1,20 @@
+1.	tasks = []
+2.	while True:
+3.	print("1. Add Task\n2. Update Task Status\n3. Generate Task Report\n4. Exit")
+4.	choice = int(input("Enter your choice: "))
+5.	if choice == 1:
+6.	task_name, assignee = input("Enter task name: "), input("Enter task assignee: ")
+7.	tasks.append({'name': task_name, 'assignee': assignee, 'status': 'Pending'})
+8.	print("Task added successfully!")
+9.	elif choice == 2:
+10.	task_name = input("Enter task name: ")
+11.	for task in tasks:
+12.	if task['name'] == task_name:
+13.	task['status'] = input("Enter new task status: ")
+14.	print("Task status updated successfully!")
+15.	break
+16.	else:
+17.	print("Task not found!")
+18.	elif choice == 3:
+19.	assignee = input("Enter assignee name: ")
+20.	filtered_tasks = [task for task in tasks if task['assignee'] == assignee]
