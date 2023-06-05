@@ -1,7 +1,9 @@
+feature code
 1.	tasks = []
 2.	while True:
 3.	print("1. Add Task\n2. Update Task Status\n3. Generate Task Report\n4. Exit")
 4.	choice = int(input("Enter your choice: "))
+//adding new task
 5.	if choice == 1:
 6.	task_name, assignee = input("Enter task name: "), input("Enter task assignee: ")
 7.	tasks.append({'name': task_name, 'assignee': assignee, 'status': 'Pending'})
